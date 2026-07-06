@@ -1,0 +1,8 @@
+# Copy this to .dev.vars (gitignored) for local dev with wrangler pages dev.
+# These values are injected as env vars into functions/api/presign.js.
+# See: https://developers.cloudflare.com/pages/functions/local-development/
+
+R2_ACCOUNT_ID=your-cloudflare-account-id
+R2_ACCESS_KEY_ID=your-r2-api-token-access-key
+R2_SECRET_ACCESS_KEY=your-r2-api-token-secret
+R2_BUCKET=your-bucket-name

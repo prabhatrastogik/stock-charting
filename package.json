@@ -1,0 +1,33 @@
+{
+  "name": "stock-charting",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 5173 & sleep 1 && wrangler pages dev --proxy 5173 --port 8788",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "deploy": "pnpm build && wrangler pages deploy dist"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.1079.0",
+    "@aws-sdk/s3-request-presigner": "^3.1079.0",
+    "aws4fetch": "^1.0.20",
+    "date-fns": "^4.4.0",
+    "klinecharts": "^9.8.10",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "zustand": "^5.0.14"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.2",
+    "@types/node": "^24.13.2",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.3",
+    "tailwindcss": "^4.3.2",
+    "typescript": "~5.8.3",
+    "vite": "^8.1.1",
+    "wrangler": "^3.103.2"
+  }
+}
